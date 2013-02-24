@@ -2,6 +2,7 @@
 layout: post
 category : lessons
 tags : [osx, tutorial, ntfs]
+tagline: read and write
 ---
 
 Como fazer NTFS read-write funcionar no OS X Lion/Mountain Lion:
