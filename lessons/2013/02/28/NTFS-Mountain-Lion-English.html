@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Ntfs Mountain Lion English</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Ntfs Mountain Lion English | mobile dev recipes</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Ntfs Mountain Lion English" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="HOW TO: NFTS Read and write on Lion/Mountain Lion" />
+<meta property="og:description" content="HOW TO: NFTS Read and write on Lion/Mountain Lion" />
+<link rel="canonical" href="http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English.html" />
+<meta property="og:url" content="http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English.html" />
+<meta property="og:site_name" content="mobile dev recipes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-02-28T00:00:00-03:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English.html","headline":"Ntfs Mountain Lion English","datePublished":"2013-02-28T00:00:00-03:00","dateModified":"2013-02-28T00:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English.html"},"description":"HOW TO: NFTS Read and write on Lion/Mountain Lion","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Felipe Rezende"></a>
+        <h2 id="title">
+          <a href="/">Felipe Rezende</a>
+        </h2>
+        <p class="tagline">Developer.</p>
+        <ul class="social"><a href="https://github.com/feliperezende">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/felipe-rezende-04413a80">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/felipe_rezende">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/lessons/2013/02/28/NTFS-Mountain-Lion-English.html">
+    <h2 class="post-title">Ntfs Mountain Lion English</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>lessons</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Feb 28, 2013</div>
+  </div>
+  <div class="post">
+    <p>HOW TO: NFTS Read and write on Lion/Mountain Lion</p>
+
+<ol>
+  <li>
+    <p>install brew package manager. <a href="http://mxcl.github.com/homebrew/">http://mxcl.github.com/homebrew/</a></p>
+  </li>
+  <li>
+    <p>install the following packages.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> brew install fuse4x
+ brew install ntfs-3g
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>copy the following file and set permissions.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo cp -rfX /usr/local/Cellar/fuse4x-kext/0.8.14/Library/Extensions/fuse4x.kext /System/Library/Extensions
+ sudo chmod +s /System/Library/Extensions/fuse4x.kext/Support/load_fuse4x
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>backup the mount script.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>create a new mount script and set permissions.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo touch /sbin/mount_ntfs
+ sudo chmod 0755 /sbin/mount_ntfs
+ sudo chown 0:0 /sbin/mount_ntfs
+ sudo nano /sbin/mount_ntfs
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>mount script content.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #!/bin/bash
+
+ VOLUME_NAME="${@:$#}"
+ VOLUME_NAME=${VOLUME_NAME#/Volumes/}
+ USER_ID=501
+ GROUP_ID=20
+ TIMEOUT=20
+
+ if [ `/usr/bin/stat -f "%u" /dev/console` -eq 0 ]; then
+         USERNAME=`/usr/bin/defaults read /library/preferences/com.apple.loginwindow | /usr/bin/grep autoLoginUser | /usr/bin/awk '{ print $3 }' | /usr/bin/sed 's/;//'`
+         if [ "$USERNAME" = "" ]; then
+                 until [ `stat -f "%u" /dev/console` -ne 0 ] || [ $TIMEOUT -eq 0 ]; do
+                         sleep 1
+                         let TIMEOUT--
+                 done
+                 if [ $TIMEOUT -ne 0 ]; then
+                         USER_ID=`/usr/bin/stat -f "%u" /dev/console`
+                         GROUP_ID=`/usr/bin/stat -f "%g" /dev/console`
+                 fi
+         else
+                 USER_ID=`/usr/bin/id -u $USERNAME`
+                 GROUP_ID=`/usr/bin/id -g $USERNAME`
+         fi
+ else
+         USER_ID=`/usr/bin/stat -f "%u" /dev/console`
+         GROUP_ID=`/usr/bin/stat -f "%g" /dev/console`
+ fi
+
+ /usr/local/bin/ntfs-3g \
+         -o volname="${VOLUME_NAME}" \
+         -o local \
+         -o noappledouble \
+         -o negative_vncache \
+         -o auto_xattr \
+         -o auto_cache \
+         -o noatime \
+         -o windows_names \
+         -o user_xattr \
+         -o inherit \
+         -o uid=$USER_ID \
+         -o gid=$GROUP_ID \
+         -o allow_other \
+         "$@" &amp;&gt; /var/log/ntfsmnt.log
+
+ exit $?;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>References:</p>
+
+<ol>
+  <li><a href="http://psionides.eu/2011/11/20/how-to-fix-ntfs-support-on-osx-lion/">http://psionides.eu/2011/11/20/how-to-fix-ntfs-support-on-osx-lion/</a></li>
+  <li><a href="http://fernandoff.posterous.com/ntfs-write-support-on-osx-lion-with-ntfs-3g-f">http://fernandoff.posterous.com/ntfs-write-support-on-osx-lion-with-ntfs-3g-f</a></li>
+</ol>
+
+  </div></div>
+
+      </section>
+    </main></body>
+</html>

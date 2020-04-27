@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-27T18:04:41-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">mobile dev recipes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to set Android TextView line spacing?</title><link href="http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html" rel="alternate" type="text/html" title="How to set Android TextView line spacing?" /><published>2020-04-27T18:00:00-03:00</published><updated>2020-04-27T18:00:00-03:00</updated><id>http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing</id><content type="html" xml:base="http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html">&lt;p&gt;You can use &lt;strong&gt;lineSpacingExtra&lt;/strong&gt; or &lt;strong&gt;lineSpacingMultiplier&lt;/strong&gt; in your XML file.&lt;/p&gt;
+
+&lt;h2 id=&quot;example&quot;&gt;Example:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;TextView&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:lineSpacingMultiplier=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0.7&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;More on &lt;a href=&quot;https://stackoverflow.com/questions/6863974/android-textview-padding-between-lines&quot;&gt;stackoverflow&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You can use lineSpacingExtra or lineSpacingMultiplier in your XML file.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/04/27/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-04-27T17:39:15-03:00</published><updated>2020-04-27T17:39:15-03:00</updated><id>http://localhost:4000/jekyll/update/2020/04/27/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/04/27/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Ntfs Mountain Lion English</title><link href="http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English.html" rel="alternate" type="text/html" title="Ntfs Mountain Lion English" /><published>2013-02-28T00:00:00-03:00</published><updated>2013-02-28T00:00:00-03:00</updated><id>http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English</id><content type="html" xml:base="http://localhost:4000/lessons/2013/02/28/NTFS-Mountain-Lion-English.html">&lt;p&gt;HOW TO: NFTS Read and write on Lion/Mountain Lion&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;install brew package manager. &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;install the following packages.&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; brew install fuse4x
+ brew install ntfs-3g
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;copy the following file and set permissions.&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo cp -rfX /usr/local/Cellar/fuse4x-kext/0.8.14/Library/Extensions/fuse4x.kext /System/Library/Extensions
+ sudo chmod +s /System/Library/Extensions/fuse4x.kext/Support/load_fuse4x
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;backup the mount script.&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo mv /sbin/mount_ntfs /sbin/mount_ntfs.orig
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;create a new mount script and set permissions.&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; sudo touch /sbin/mount_ntfs
+ sudo chmod 0755 /sbin/mount_ntfs
+ sudo chown 0:0 /sbin/mount_ntfs
+ sudo nano /sbin/mount_ntfs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;mount script content.&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; #!/bin/bash
+
+ VOLUME_NAME=&quot;${@:$#}&quot;
+ VOLUME_NAME=${VOLUME_NAME#/Volumes/}
+ USER_ID=501
+ GROUP_ID=20
+ TIMEOUT=20
+
+ if [ `/usr/bin/stat -f &quot;%u&quot; /dev/console` -eq 0 ]; then
+         USERNAME=`/usr/bin/defaults read /library/preferences/com.apple.loginwindow | /usr/bin/grep autoLoginUser | /usr/bin/awk '{ print $3 }' | /usr/bin/sed 's/;//'`
+         if [ &quot;$USERNAME&quot; = &quot;&quot; ]; then
+                 until [ `stat -f &quot;%u&quot; /dev/console` -ne 0 ] || [ $TIMEOUT -eq 0 ]; do
+                         sleep 1
+                         let TIMEOUT--
+                 done
+                 if [ $TIMEOUT -ne 0 ]; then
+                         USER_ID=`/usr/bin/stat -f &quot;%u&quot; /dev/console`
+                         GROUP_ID=`/usr/bin/stat -f &quot;%g&quot; /dev/console`
+                 fi
+         else
+                 USER_ID=`/usr/bin/id -u $USERNAME`
+                 GROUP_ID=`/usr/bin/id -g $USERNAME`
+         fi
+ else
+         USER_ID=`/usr/bin/stat -f &quot;%u&quot; /dev/console`
+         GROUP_ID=`/usr/bin/stat -f &quot;%g&quot; /dev/console`
+ fi
+
+ /usr/local/bin/ntfs-3g \
+         -o volname=&quot;${VOLUME_NAME}&quot; \
+         -o local \
+         -o noappledouble \
+         -o negative_vncache \
+         -o auto_xattr \
+         -o auto_cache \
+         -o noatime \
+         -o windows_names \
+         -o user_xattr \
+         -o inherit \
+         -o uid=$USER_ID \
+         -o gid=$GROUP_ID \
+         -o allow_other \
+         &quot;$@&quot; &amp;amp;&amp;gt; /var/log/ntfsmnt.log
+
+ exit $?;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;References:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://psionides.eu/2011/11/20/how-to-fix-ntfs-support-on-osx-lion/&quot;&gt;http://psionides.eu/2011/11/20/how-to-fix-ntfs-support-on-osx-lion/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://fernandoff.posterous.com/ntfs-write-support-on-osx-lion-with-ntfs-3g-f&quot;&gt;http://fernandoff.posterous.com/ntfs-write-support-on-osx-lion-with-ntfs-3g-f&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="lessons" /><category term="osx" /><category term="tutorial" /><category term="ntfs" /><summary type="html">HOW TO: NFTS Read and write on Lion/Mountain Lion</summary></entry></feed>
