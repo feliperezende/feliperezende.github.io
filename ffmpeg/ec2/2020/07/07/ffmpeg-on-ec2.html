@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>Installing ffmpeg on EC2</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Installing ffmpeg on EC2 | my recipes</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Installing ffmpeg on EC2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The easy way" />
+<meta property="og:description" content="The easy way" />
+<link rel="canonical" href="http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html" />
+<meta property="og:url" content="http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html" />
+<meta property="og:site_name" content="my recipes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-07T18:00:00-03:00" />
+<script type="application/ld+json">
+{"headline":"Installing ffmpeg on EC2","url":"http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html","dateModified":"2020-07-07T18:00:00-03:00","datePublished":"2020-07-07T18:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html"},"description":"The easy way","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Felipe Rezende"></a>
+        <h2 id="title">
+          <a href="/">Felipe Rezende</a>
+        </h2>
+        <p class="tagline"></p>
+        <ul class="social"><a href="https://github.com/feliperezende">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/felipe-rezende-04413a80">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/felipe_rezende">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html">
+    <h2 class="post-title">Installing ffmpeg on EC2</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>ffmpeg</li><li>ec2</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Jul 7, 2020</div>
+  </div>
+  <div class="post">
+    <h3 id="the-easy-way">The easy way</h3>
+
+<ol>
+  <li>SSH into your instance and become root
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su -
+</code></pre></div>    </div>
+  </li>
+  <li>Go to the the /usr/local/bin directory
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/local/bin
+</code></pre></div>    </div>
+  </li>
+  <li>Inside the /usr/local/bin directory, create an “ffmpeg” directory
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ffmpeg
+</code></pre></div>    </div>
+  </li>
+  <li>Go into the new directory
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> cd ffmpeg
+</code></pre></div>    </div>
+  </li>
+  <li>Go to static build directory at http://ffmpeg.gusari.org/static/64bit/ and pick the latest version of FFMPEG.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+</code></pre></div>    </div>
+  </li>
+  <li>The file should now be in /usr/local/bin/ffmpeg. Untar it…
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -xzf ffmpeg.static.64bit.2014-02-16.tar.gz
+</code></pre></div>    </div>
+  </li>
+  <li>If you want to be able to execute FFMPEG from any directory, simply create a symlink into /usr/bin like this:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p>Now, you should be able to run the command “ffmpeg” from anywhere</p>
+
+<p>Reference:</p>
+<ul>
+  <li><a href="https://forums.aws.amazon.com/thread.jspa?messageID=332091">nbcnc on AWS Forums</a></li>
+  <li><a href="https://medium.com/@maskaravivek/how-to-install-ffmpeg-on-ec2-running-amazon-linux-451e4a8e2694">Vivek Maskara on Medium</a></li>
+</ul>
+
+
+  </div></div>
+
+      </section>
+    </main></body>
+</html>

@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-27T18:04:41-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">mobile dev recipes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to set Android TextView line spacing?</title><link href="http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html" rel="alternate" type="text/html" title="How to set Android TextView line spacing?" /><published>2020-04-27T18:00:00-03:00</published><updated>2020-04-27T18:00:00-03:00</updated><id>http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing</id><content type="html" xml:base="http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html">&lt;p&gt;You can use &lt;strong&gt;lineSpacingExtra&lt;/strong&gt; or &lt;strong&gt;lineSpacingMultiplier&lt;/strong&gt; in your XML file.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-07T21:29:27-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">my recipes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Installing ffmpeg on EC2</title><link href="http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html" rel="alternate" type="text/html" title="Installing ffmpeg on EC2" /><published>2020-07-07T18:00:00-03:00</published><updated>2020-07-07T18:00:00-03:00</updated><id>http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2</id><content type="html" xml:base="http://localhost:4000/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html">&lt;h3 id=&quot;the-easy-way&quot;&gt;The easy way&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;SSH into your instance and become root
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo su -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Go to the the /usr/local/bin directory
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /usr/local/bin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Inside the /usr/local/bin directory, create an “ffmpeg” directory
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir ffmpeg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Go into the new directory
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; cd ffmpeg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Go to static build directory at http://ffmpeg.gusari.org/static/64bit/ and pick the latest version of FFMPEG.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;The file should now be in /usr/local/bin/ffmpeg. Untar it…
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar -xzf ffmpeg.static.64bit.2014-02-16.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If you want to be able to execute FFMPEG from any directory, simply create a symlink into /usr/bin like this:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now, you should be able to run the command “ffmpeg” from anywhere&lt;/p&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forums.aws.amazon.com/thread.jspa?messageID=332091&quot;&gt;nbcnc on AWS Forums&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/@maskaravivek/how-to-install-ffmpeg-on-ec2-running-amazon-linux-451e4a8e2694&quot;&gt;Vivek Maskara on Medium&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">The easy way</summary></entry><entry><title type="html">How to set Android TextView line spacing?</title><link href="http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html" rel="alternate" type="text/html" title="How to set Android TextView line spacing?" /><published>2020-04-27T18:00:00-03:00</published><updated>2020-04-27T18:00:00-03:00</updated><id>http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing</id><content type="html" xml:base="http://localhost:4000/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html">&lt;p&gt;You can use &lt;strong&gt;lineSpacingExtra&lt;/strong&gt; or &lt;strong&gt;lineSpacingMultiplier&lt;/strong&gt; in your XML file.&lt;/p&gt;
 
 &lt;h2 id=&quot;example&quot;&gt;Example:&lt;/h2&gt;
 
