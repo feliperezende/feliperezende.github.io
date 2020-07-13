@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>How do I redirect HTTP traffic to HTTPS on Apache</title>
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How do I redirect HTTP traffic to HTTPS on Apache | my recipes</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How do I redirect HTTP traffic to HTTPS on Apache" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /etc/apache2/apache2.conf (Apache on Ubuntu)." />
+<meta property="og:description" content="Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /etc/apache2/apache2.conf (Apache on Ubuntu)." />
+<link rel="canonical" href="https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html" />
+<meta property="og:url" content="https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html" />
+<meta property="og:site_name" content="my recipes" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-13T18:00:00-03:00" />
+<script type="application/ld+json">
+{"headline":"How do I redirect HTTP traffic to HTTPS on Apache","url":"https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html","dateModified":"2020-07-13T18:00:00-03:00","datePublished":"2020-07-13T18:00:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html"},"description":"Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /etc/apache2/apache2.conf (Apache on Ubuntu).","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+</head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="/assets/portfolio.png" alt="Felipe Rezende"></a>
+        <h2 id="title">
+          <a href="/">Felipe Rezende</a>
+        </h2>
+        <p class="tagline"></p>
+        <ul class="social"><a href="https://github.com/feliperezende">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a><a href="https://www.linkedin.com/in/felipe-rezende-04413a80">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a><a href="https://twitter.com/felipe_rezende">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a></ul><p>&copy;
+          2020</p>
+      </section>
+      <section class="content">
+        <div class="post-container">
+  <a class="post-link" href="/apache/http/2020/07/13/redirect-http-traffic-to-https.html">
+    <h2 class="post-title">How do I redirect HTTP traffic to HTTPS on Apache</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories"><li>apache</li><li>http</li></ul>
+    <div class="post-date"><i class="icon-calendar"></i>Jul 13, 2020</div>
+  </div>
+  <div class="post">
+    <ol>
+  <li>
+    <p>Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /etc/apache2/apache2.conf (Apache on Ubuntu).</p>
+  </li>
+  <li>
+    <p>Add a rewrite rule to the VirtualHost section of your configuration file similar to the following:</p>
+  </li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;VirtualHost *:80&gt;
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
+&lt;/VirtualHost&gt;
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>Save your Apache configuration file.</p>
+  </li>
+  <li>
+    <p>Restart Apache.</p>
+  </li>
+</ol>
+
+<p>Reference:</p>
+<ul>
+  <li>[AWS<a href="https://aws.amazon.com/premiumsupport/knowledge-center/redirect-http-https-elb/">1</a></li>
+</ul>
+
+
+  </div></div>
+
+      </section>
+    </main></body>
+</html>

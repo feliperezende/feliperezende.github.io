@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://feliperezende.github.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://feliperezende.github.com/" rel="alternate" type="text/html" /><updated>2020-07-07T21:45:06-03:00</updated><id>https://feliperezende.github.com/feed.xml</id><title type="html">my recipes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Installing ffmpeg on EC2</title><link href="https://feliperezende.github.com/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html" rel="alternate" type="text/html" title="Installing ffmpeg on EC2" /><published>2020-07-07T18:00:00-03:00</published><updated>2020-07-07T18:00:00-03:00</updated><id>https://feliperezende.github.com/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2</id><content type="html" xml:base="https://feliperezende.github.com/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html">&lt;h3 id=&quot;the-easy-way&quot;&gt;The easy way&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://feliperezende.github.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://feliperezende.github.com/" rel="alternate" type="text/html" /><updated>2020-07-13T18:15:03-03:00</updated><id>https://feliperezende.github.com/feed.xml</id><title type="html">my recipes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How do I redirect HTTP traffic to HTTPS on Apache</title><link href="https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html" rel="alternate" type="text/html" title="How do I redirect HTTP traffic to HTTPS on Apache" /><published>2020-07-13T18:00:00-03:00</published><updated>2020-07-13T18:00:00-03:00</updated><id>https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https</id><content type="html" xml:base="https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /etc/apache2/apache2.conf (Apache on Ubuntu).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add a rewrite rule to the VirtualHost section of your configuration file similar to the following:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;VirtualHost *:80&amp;gt;
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
+&amp;lt;/VirtualHost&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Save your Apache configuration file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Restart Apache.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[AWS&lt;a href=&quot;https://aws.amazon.com/premiumsupport/knowledge-center/redirect-http-https-elb/&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /etc/apache2/apache2.conf (Apache on Ubuntu).</summary></entry><entry><title type="html">Installing ffmpeg on EC2</title><link href="https://feliperezende.github.com/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html" rel="alternate" type="text/html" title="Installing ffmpeg on EC2" /><published>2020-07-07T18:00:00-03:00</published><updated>2020-07-07T18:00:00-03:00</updated><id>https://feliperezende.github.com/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2</id><content type="html" xml:base="https://feliperezende.github.com/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html">&lt;h3 id=&quot;the-easy-way&quot;&gt;The easy way&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;SSH into your instance and become root
