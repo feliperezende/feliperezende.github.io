@@ -1,108 +1,323 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css">
-<title>my recipes</title>
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>my recipes | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
-<meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="my recipes" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:site_name" content="my recipes" />
-<script type="application/ld+json">
-{"headline":"my recipes","url":"http://localhost:4000/","name":"my recipes","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-</head>
-  <body>
-    <main class="container">
-      <section class="about">
-        <a href="/"><img src="/assets/portfolio.png" alt="Felipe Rezende"></a>
-        <h2 id="title">
-          <a href="/">Felipe Rezende</a>
-        </h2>
-        <p class="tagline"></p>
-        <ul class="social"><a href="https://github.com/feliperezende">
-              <li>
-                <i class="icon-github-circled"></i>
-              </li>
-            </a><a href="https://www.linkedin.com/in/felipe-rezende-04413a80">
-              <li>
-                <i class="icon-linkedin-squared"></i>
-              </li>
-            </a><a href="https://twitter.com/felipe_rezende">
-              <li>
-                <i class="icon-twitter-squared"></i>
-              </li>
-            </a></ul><p>&copy;
-          2020</p>
-      </section>
-      <section class="content">
-        
-<ul class="posts">
-    <li>
-      <h1 id="posts-label">posts</h1>
-    </li><li><a class="post-link" href="/apache/http/2020/07/13/redirect-http-traffic-to-https.html">
-          <h2 class="post-title">How do I redirect HTTP traffic to HTTPS on Apache</h2>
-        </a>
-        <div class="post-meta">
-          <ul class="post-categories"><li>apache</li><li>http</li></ul>
-          <div class="post-date">
-            <i class="icon-calendar"></i>
-            Jul 13, 2020</div>
-        </div>
-        <div class="post"></div>
-      </li><li><a class="post-link" href="/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html">
-          <h2 class="post-title">Installing ffmpeg on EC2</h2>
-        </a>
-        <div class="post-meta">
-          <ul class="post-categories"><li>ffmpeg</li><li>ec2</li></ul>
-          <div class="post-date">
-            <i class="icon-calendar"></i>
-            Jul 7, 2020</div>
-        </div>
-        <div class="post"></div>
-      </li><li><a class="post-link" href="/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html">
-          <h2 class="post-title">How to set Android TextView line spacing?</h2>
-        </a>
-        <div class="post-meta">
-          <ul class="post-categories"><li>android</li><li>sdk</li><li>textview</li><li>line</li><li>spacing</li></ul>
-          <div class="post-date">
-            <i class="icon-calendar"></i>
-            Apr 27, 2020</div>
-        </div>
-        <div class="post"></div>
-      </li><li><a class="post-link" href="/jekyll/update/2020/04/27/welcome-to-jekyll.html">
-          <h2 class="post-title">Welcome to Jekyll!</h2>
-        </a>
-        <div class="post-meta">
-          <ul class="post-categories"><li>jekyll</li><li>update</li></ul>
-          <div class="post-date">
-            <i class="icon-calendar"></i>
-            Apr 27, 2020</div>
-        </div>
-        <div class="post"></div>
-      </li><li><a class="post-link" href="/lessons/2013/02/28/NTFS-Mountain-Lion-English.html">
-          <h2 class="post-title">Ntfs Mountain Lion English</h2>
-        </a>
-        <div class="post-meta">
-          <ul class="post-categories"><li>lessons</li></ul>
-          <div class="post-date">
-            <i class="icon-calendar"></i>
-            Feb 28, 2013</div>
-        </div>
-        <div class="post"></div>
-      </li></ul>
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.3 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
 
-  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
-		<use xlink:href="/assets/minima-social-icons.svg#rss"></use>
-	</svg><a href="/feed.xml">Subscribe</a></p> -->
-      </section>
-    </main></body>
+<!-- begin _includes/seo.html --><title>Knowledge base</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+  <meta name="author" content="Felipe Rezende">
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Knowledge base">
+<meta property="og:title" content="Knowledge base">
+<meta property="og:url" content="https://feliperezende.github.com/">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://feliperezende.github.com/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://feliperezende.github.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Knowledge base Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--home">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Knowledge base
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="archive">
+    
+      <h1 id="page-title" class="page__title"></h1>
+    
+    
+
+
+<h3 class="archive__subtitle">Recent Posts</h3>
+
+
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/apache/http/2020/07/13/redirect-http-traffic-to-https.html" rel="permalink">How do I redirect HTTP traffic to HTTPS on Apache
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Open your Apache configuration file. Possible locations include /etc/httpd/conf/httpd.conf (Apache 2/httpd), /etc/apache2/sites-enabled/ (Apache 2.4), or /et...</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ffmpeg/ec2/2020/07/07/ffmpeg-on-ec2.html" rel="permalink">Installing ffmpeg on EC2
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">SSH into your instance and become root
+
+$ sudo su -
+
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/android/sdk/textview/line/spacing/2020/04/27/android-textview-linespacing.html" rel="permalink">How to set Android TextView line spacing?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">You can use lineSpacingExtra or lineSpacingMultiplier in your XML file.
+
+</p>
+  </article>
+</div>
+
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/lessons/2013/02/28/NTFS-Mountain-Lion-English.html" rel="permalink">Ntfs Mountain Lion English
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">HOW TO: NFTS Read and write on Lion/Mountain Lion
+
+</p>
+  </article>
+</div>
+
+
+
+
+
+
+  </div>
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Knowledge base. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
 </html>
