@@ -22,4 +22,16 @@ var store = [{
         "tags": [],
         "url": "https://feliperezende.github.com/apache/http/2020/07/13/redirect-http-traffic-to-https.html",
         "teaser": null
+      },{
+        "title": "Python: Creating a virtual environment",
+        "excerpt":"virtualenv is used to manage Python packages for different projects. Using virtualenv allows you to avoid installing Python packages globally which could break system tools or other projects. You can install virtualenv using pip. Note: If you are using Python 3.3 or newer, the venv module is the preferred way...","categories": ["python","venv"],
+        "tags": [],
+        "url": "https://feliperezende.github.com/python/venv/2020/07/16/virtual-environment-python.html",
+        "teaser": null
+      },{
+        "title": "Removing files older than 30 days",
+        "excerpt":"find /path/to/ -type f -mtime +30 -name '*.mp4' -execdir rm -- '{}' \\; find: the unix command for finding files/directories/links and etc. /path/to/: the directory to start your search in. -type f: only find files. -name ‘*.mp4’: list files that ends with .mp4. -mtime +30: only consider the ones with...","categories": ["linux","shell"],
+        "tags": [],
+        "url": "https://feliperezende.github.com/linux/shell/2020/09/29/linux-removing-files-older-than-x-days.html",
+        "teaser": null
       }]
