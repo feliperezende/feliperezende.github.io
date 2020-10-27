@@ -35,7 +35,7 @@ author:
 
 # Build settings
 theme: jekyll-theme-cayman 
-repository: feliperezende/feliperezende.github.io 
+repository: feliperezende/feliperezende.github.com
 
 plugins:
   - jekyll-feed
