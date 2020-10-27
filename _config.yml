@@ -34,7 +34,7 @@ author:
     github:  feliperezende
 
 # Build settings
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-cayman 
 repository: feliperezende/feliperezende.github.io
 minimal_mistakes_skin: "dark"
 
