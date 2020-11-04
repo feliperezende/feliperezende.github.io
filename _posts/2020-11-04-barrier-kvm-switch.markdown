@@ -22,8 +22,8 @@ pacman -S barrier
 Configure server and clients. 
 
 Links:
-[Barrier on Homebrew][1]
-[Barrier on Github][2]
+- [Barrier on Homebrew][1]
+- [Barrier on Github][2]
 
-[1] https://formulae.brew.sh/cask/barrier
-[2] https://github.com/debauchee/barrier
+[1]: https://formulae.brew.sh/cask/barrier
+[2]: https://github.com/debauchee/barrier
