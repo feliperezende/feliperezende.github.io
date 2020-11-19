@@ -33,6 +33,12 @@ Install packages
 pip install -r requirements.txt
 {% endhighlight %}          
 
+Freeze requirements
+================================
+{% highlight shell %}
+pip freeze > requirements.txt
+{% endhighlight %}
+
 Leaving the virtual environment
 ===============================
 {% highlight shell %}
