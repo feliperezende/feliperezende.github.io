@@ -36,7 +36,8 @@ author:
 # Build settings
 #theme: jekyll-theme-cayman 
 repository: feliperezende/feliperezende.github.com
-remote_theme: poole/hyde
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "dark"
 
 plugins:
   - jekyll-feed
