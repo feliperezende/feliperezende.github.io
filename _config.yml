@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Insert mode 
+subtitle: "Snippets & HOW TOs"
 description: "Snippets & HOW TOs"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://feliperezende.github.com" # the base hostname & protocol for your site, e.g. http://example.com
