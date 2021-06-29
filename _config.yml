@@ -25,11 +25,16 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://feliperezende.github.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 author:
-  name:  Felipe Rezende
+  name: "Felipe Rezende"
+  bio: "Software developer. Mobile apps, web and linux."
   location : "São Paulo, Brazil"
-  social:
-    twitter: felipe_rezende
-    github:  feliperezende
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/felipe_rezende"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/feliperezende"
 
 # Build settings
 #theme: jekyll-theme-cayman 
