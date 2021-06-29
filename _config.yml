@@ -36,6 +36,15 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/feliperezende"
 
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/felipe_rezende"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/feliperezende"
+
 # Build settings
 #theme: jekyll-theme-cayman 
 repository: feliperezende/feliperezende.github.com
@@ -62,6 +71,7 @@ defaults:
       type: pages
     values:
       layout: home
+      author_profile: true
 
 #plainwhite:
 #  name: felipe rezende
