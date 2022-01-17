@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -18,11 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Insert mode 
+title: Insert mode
 subtitle: "Snippets & HOW TOs"
 description: "Snippets & HOW TOs"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://feliperezende.github.com" # the base hostname & protocol for your site, e.g. http://example.com
+github: [metadata]
 
 author:
   name: "Felipe Rezende"
@@ -46,7 +47,7 @@ footer:
       url: "https://github.com/feliperezende"
 
 # Build settings
-#theme: jekyll-theme-cayman 
+#theme: jekyll-theme-cayman
 repository: feliperezende/feliperezende.github.com
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
@@ -75,7 +76,7 @@ defaults:
 
 #plainwhite:
 #  name: felipe rezende
-#  tagline: 
+#  tagline:
 #  date_format: "%b %-d, %y"
 #
 #  social_links:
