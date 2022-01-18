@@ -3,6 +3,7 @@ layout: single
 title:  "Barrier: control multiple computers with one keyboard mouse"
 date:   2020-11-04 00:00:00 -0300
 categories: kvm keyboard mouse monitor
+tags : [mac os, linux]
 ---
 
 Barrier is an open-source kvm software.
@@ -19,7 +20,7 @@ brew cask install barrier
 pacman -S barrier
 {% endhighlight %}
 
-Configure server and clients. 
+Configure server and clients.
 
 Links:
 - [Barrier on Homebrew][1]

@@ -3,6 +3,7 @@ layout: single
 title:  "Python: Creating a virtual environment"
 date:   2020-07-16 00:00:00 -0300
 categories: python venv
+tags : [python]
 ---
 
 virtualenv is used to manage Python packages for different projects. Using virtualenv allows you to avoid installing Python packages globally which could break system tools or other projects. You can install virtualenv using pip.
@@ -31,7 +32,7 @@ Install packages
 ================================
 {% highlight shell %}
 pip install -r requirements.txt
-{% endhighlight %}          
+{% endhighlight %}
 
 Freeze requirements
 ================================
@@ -45,7 +46,7 @@ Leaving the virtual environment
 deactivate
 {% endhighlight %}
 
-Reference: 
+Reference:
 - [python.org][1]
 
 [1]: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/

@@ -3,6 +3,7 @@ layout: single
 title:  "Removing files older than 30 days"
 date:   2020-09-29 00:00:00 -0300
 categories: linux shell
+tags : [shell]
 ---
 
 {% highlight shell %}

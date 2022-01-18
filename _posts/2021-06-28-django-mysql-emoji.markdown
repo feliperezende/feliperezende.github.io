@@ -3,6 +3,7 @@ layout: single
 title:  "Django MySQL emoji support"
 date:   2021-06-28 00:00:00 -0300
 categories: django mysql emoji
+tags : [django, python, mysql]
 ---
 
 This post explains how to add emoji support to MySQL.

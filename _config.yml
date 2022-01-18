@@ -46,6 +46,8 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/feliperezende"
 
+markdown: kramdown
+
 # Build settings
 #theme: jekyll-theme-cayman
 repository: feliperezende/feliperezende.github.com
@@ -64,8 +66,11 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      #author_profile: true
       read_time: true
+      share: true
+      related: true
+      toc: true
   # _pages
   - scope:
       path: ""

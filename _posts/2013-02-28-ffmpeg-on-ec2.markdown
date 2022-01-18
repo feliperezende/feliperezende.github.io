@@ -3,8 +3,12 @@ layout: single
 title:  "Installing ffmpeg on EC2"
 date:   2020-07-07 18:00:00 -0300
 categories: ffmpeg ec2
+tags : [ec2, linux, ffmpeg]
 ---
 
+This article explains how to install fffmpeg on a EC2 instance.
+
+# Setup
 SSH into your instance and become root
 {% highlight shell %}
 $ sudo su -
@@ -32,10 +36,10 @@ $ wget https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar
 
 The file should now be in /usr/local/bin/ffmpeg. Untar it...
 {% highlight shell %}
-$ tar -xf ffmpeg-release-amd64-static.tar.xz 
+$ tar -xf ffmpeg-release-amd64-static.tar.xz
 {% endhighlight %}
 
-Move files 
+Move files
 {% highlight shell %}
 $ mv ffmpeg-release-amd64-static/* .
 {% endhighlight %}
@@ -47,7 +51,7 @@ $ ln -s /usr/local/bin/ffmpeg/ffmpeg /usr/bin/ffmpeg
 
 Now, you should be able to run the command "ffmpeg" from anywhere
 
-Reference: 
+# Reference
 - [nbcnc on AWS Forums][2]
 - [Vivek Maskara on Medium][1]
 
