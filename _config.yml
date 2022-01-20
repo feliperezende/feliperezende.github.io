@@ -28,11 +28,11 @@ github: [metadata]
 author:
   name: "Felipe Rezende"
   bio: "Software developer. Mobile apps, web and linux."
-  location : "São Paulo, Brazil"
+    #  location : "São Paulo, Brazil"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/felipe_rezende"
+    # - label: "Twitter"
+    # icon: "fab fa-fw fa-twitter-square"
+    # url: "https://twitter.com/felipe_rezende"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/feliperezende"
@@ -77,7 +77,7 @@ defaults:
       type: pages
     values:
       layout: home
-      author_profile: true
+        #author_profile: true
 
 #plainwhite:
 #  name: felipe rezende

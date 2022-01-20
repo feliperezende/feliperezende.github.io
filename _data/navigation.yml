@@ -1,4 +1,6 @@
 main:
+  - title: "Donate"
+    url: https://www.buymeacoffee.com/frv87
   - title: "Tags"
     url: /tags/
   - title: "About"
