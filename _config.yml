@@ -22,7 +22,7 @@ title: Insert mode
 subtitle: "Snippets & HOW TOs"
 description: "Snippets & HOW TOs"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://feliperezende.github.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://feliperezende.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github: [metadata]
 
 author:
@@ -58,6 +58,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-include-cache
+  - jekyll-sitemap
 
 defaults:
   # _posts

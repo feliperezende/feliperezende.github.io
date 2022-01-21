@@ -294,6 +294,7 @@ DEPENDENCIES
   github-pages
   jekyll-feed
   jekyll-seo-tag
+  jekyll-sitemap
   minimal-mistakes-jekyll
   tzinfo (~> 1.2)
   tzinfo-data
