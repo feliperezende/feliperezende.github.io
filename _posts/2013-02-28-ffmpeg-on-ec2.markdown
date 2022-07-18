@@ -6,7 +6,7 @@ categories: ffmpeg ec2
 tags : [ec2, linux, ffmpeg]
 ---
 
-This article explains how to install fffmpeg on a EC2 instance.
+This article explains how to install ffmpeg on a EC2 instance.
 
 # Setup
 SSH into your instance and become root
