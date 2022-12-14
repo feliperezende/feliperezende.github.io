@@ -3,7 +3,7 @@ layout: single
 title:  "Flask vs Django"
 date:   2022-05-02 00:00:00 -0300
 categories: mysql csv
-tags : [mysql, csv]
+tags : [django]
 ---
 # Introduction
 Flask and Django are two popular web development frameworks for Python. While they share many similarities, there are some key differences between the two that make them suitable for different use cases.
